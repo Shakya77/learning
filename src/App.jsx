@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Title from './components/Title';
 
 const App = () => {
 
@@ -17,12 +18,13 @@ const App = () => {
       return prevEvents.filter((event) => {
         return id !== event.id;
       })
-    });7
+    });
     console.log(id);
   };
 
   return (
     <div>
+      <Title />
       {showEvents && (
         <div>
           <button onClick={() => setShowEvents(false)}>hide events</button>
