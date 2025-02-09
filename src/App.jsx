@@ -10,7 +10,8 @@ const App = () => {
   const [events, setEvents] = useState([
     { title: "mario ko xoro ko brth day", id: 1 },
     { title: "ramey ko brth day", id: 2 },
-    { title: "hari ko xoro ko brth day", id: 3 }
+    { title: "hari ko xoro ko brth day", id: 3 },
+    { title: "hari ko xori ko xoro ko brth day", id: 4 },
   ]);
 
   const handleClick = (id) => {
