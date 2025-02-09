@@ -12,24 +12,29 @@ const App = () => {
     { title: "hari ko xoro ko brth day", id: 3 }
   ]);
 
-
   const handleClick = (id) => {
     setEvents((prevEvents) => {
       return prevEvents.filter((event) => {
         return id !== event.id;
       })
-    });
+    });7
     console.log(id);
   };
 
   return (
     <div>
-      <div>
-        <button onClick={() => setShowEvents(false)}>hide events</button>
-      </div>
-      <div>
-        <button onClick={() => setShowEvents(true)}>show events</button>
-      </div>
+      {showEvents && (
+        <div>
+          <button onClick={() => setShowEvents(false)}>hide events</button>
+        </div>
+      )}
+
+      {!showEvents && (
+        <div>
+          <button onClick={() => setShowEvents(true)}>show events</button>
+        </div>
+      )}
+
       {showEvents &&
         events.map((event, index) => (
           <div key={event.id}>
