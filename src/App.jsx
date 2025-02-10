@@ -5,7 +5,6 @@ const App = () => {
 
   const [showEvents, setShowEvents] = useState(true);
 
-  console.log(showEvents);
 
   const [events, setEvents] = useState([
     { title: "mario ko xoro ko brth day", id: 1 },
@@ -20,12 +19,14 @@ const App = () => {
         return id !== event.id;
       })
     });
-    console.log(id);
   };
+
+  const subtitle = "this is the subtitle";
 
   return (
     <div>
-      <Title />
+      <Title title="this is the title" subtitle={subtitle} />
+      <Title title="this is the second title" subtitle="another subtitle" />
       {showEvents && (
         <div>
           <button onClick={() => setShowEvents(false)}>hide events</button>
