@@ -4,9 +4,8 @@ import Modal from './components/Modal';
 
 const App = () => {
 
+  const [showModal, setShowModal] = useState(true);
   const [showEvents, setShowEvents] = useState(true);
-
-
   const [events, setEvents] = useState([
     { title: "mario ko xoro ko brth day", id: 1 },
     { title: "ramey ko brth day", id: 2 },
@@ -23,6 +22,10 @@ const App = () => {
   };
 
   const subtitle = "this is the subtitle";
+
+  const handleClose = () => {
+    setShowModal(false);
+  }
 
   return (
     <div>
@@ -48,14 +51,15 @@ const App = () => {
           </React.Fragment>
         ))
       }
+
       {/* <Modal>
         <h2>Modal title</h2>
         <p>modal content with something in text</p>
       </Modal> */}
-      <Modal>
+      {showModal && <Modal handleClose={handleClose}>
         <p>The movie is live right now</p>
         <a href='#'>Click here to see the trailer</a>
-      </Modal>
+      </Modal>}
     </div>
   )
 }
