@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Title from './components/Title';
+import Modal from './components/Modal';
 
 const App = () => {
 
@@ -41,12 +42,20 @@ const App = () => {
 
       {showEvents &&
         events.map((event, index) => (
-          <div key={event.id}>
+          <React.Fragment key={event.id}>
             <h2>{index} - {event.title}</h2>
             <button onClick={() => { handleClick(event.id) }}>Delete Event</button>
-          </div>
+          </React.Fragment>
         ))
       }
+      {/* <Modal>
+        <h2>Modal title</h2>
+        <p>modal content with something in text</p>
+      </Modal> */}
+      <Modal>
+        <p>The movie is live right now</p>
+        <a href='#'>Click here to see the trailer</a>
+      </Modal>
     </div>
   )
 }
