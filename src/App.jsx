@@ -4,7 +4,7 @@ import Modal from './components/Modal';
 
 const App = () => {
 
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const [showEvents, setShowEvents] = useState(true);
   const [events, setEvents] = useState([
     { title: "mario ko xoro ko brth day", id: 1 },
@@ -29,6 +29,10 @@ const App = () => {
 
   return (
     <div>
+      <div className="">
+        <button onClick={() => { setShowModal(true) }}>Open Model</button>
+      </div>
+
       <Title title="this is the title" subtitle={subtitle} />
       <Title title="this is the second title" subtitle="another subtitle" />
       {showEvents && (
