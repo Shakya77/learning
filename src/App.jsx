@@ -34,8 +34,18 @@ const App = () => {
         <button onClick={() => { setShowModal(true) }}>Open Modal</button>
       </div>
 
-      <Title title="this is the title" subtitle={subtitle} />
-      <Title title="this is the second title" subtitle="another subtitle" />
+      <Title>
+        <h1 className="title">this is the title</h1>
+        <br />
+        <h2 className="subtitle">{subtitle}</h2>
+      </Title>
+
+      <Title >
+        <h1 className="title">this is not the title</h1>
+        <br />
+        <h2 className="subtitle">Another Subtitle</h2>
+      </Title>
+
       {showEvents && (
         <div>
           <button onClick={() => setShowEvents(false)}>hide events</button>
@@ -47,7 +57,6 @@ const App = () => {
           <button onClick={() => setShowEvents(true)}>show events</button>
         </div>
       )}
-
 
       {showEvents && <EventList events={events} handleClick={handleClick} />}
 

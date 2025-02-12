@@ -27,7 +27,7 @@ button {
 }
 
 
-.title {
+.title-block .title {
     display: inline-block;
     padding: 30px 60px;
     background: #f4f4f4;
@@ -36,7 +36,7 @@ button {
     margin-bottom: 10px;
 }
 
-.subtitle {
+.title-block .subtitle {
     display: inline-block;
     color: #555;
     font-weight: normal;
